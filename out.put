@@ -1,0 +1,2 @@
+CompilerOracle: dontinline VolatileTest.readWrite
+CompilerOracle: compileonly VolatileTest.readWrite

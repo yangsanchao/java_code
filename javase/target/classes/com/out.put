@@ -1,0 +1,2 @@
+CompilerOracle: dontinline VolatileDemo2.main
+CompilerOracle: compileonly VolatileDemo2.test
