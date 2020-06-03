@@ -1,4 +1,4 @@
-package com.yangsc.lock;
+package com.yangsc.juc;
 
 import lombok.extern.log4j.Log4j2;
 
