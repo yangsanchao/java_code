@@ -13,8 +13,8 @@ import lombok.extern.log4j.Log4j2;
  **/
 @Log4j2
 public class VolatileTest2 {
-    private static int x = 0, y = 0;
-    private static int a = 0, b = 0;
+    private static volatile int x = 0, y = 0;
+    private static volatile int a = 0, b = 0;
 
     public static void main(String[] args) throws InterruptedException {
         int i = 0;

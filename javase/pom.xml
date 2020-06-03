@@ -11,4 +11,12 @@
 
     <artifactId>javase</artifactId>
 
+    <dependencies>
+        <!--添加这个工具的依赖-->
+        <dependency>
+            <groupId>org.openjdk.jol</groupId>
+            <artifactId>jol-core</artifactId>
+            <version>0.9</version>
+        </dependency>
+    </dependencies>
 </project>
