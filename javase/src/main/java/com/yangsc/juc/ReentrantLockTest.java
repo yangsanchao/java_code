@@ -17,7 +17,15 @@ import java.util.concurrent.locks.ReentrantLock;
 public class ReentrantLockTest {
 
     public static void main(String[] args) {
-        ReentrantLock reentrantLock = new ReentrantLock();
+        int a = 0;
+        int b = 1;
+        int c = 2;
+        a = b = c;
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+
+        ReentrantLock reentrantLock = new ReentrantLock(true);
         reentrantLock.lock();
         try {
             log.info("lock");
@@ -25,6 +33,7 @@ public class ReentrantLockTest {
             log.error(e);
         } finally {
             reentrantLock.unlock();
+            log.info("unlock");
         }
     }
 }
