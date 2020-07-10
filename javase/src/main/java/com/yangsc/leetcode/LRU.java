@@ -1,4 +1,4 @@
-package com.yangsc;
+package com.yangsc.leetcode;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

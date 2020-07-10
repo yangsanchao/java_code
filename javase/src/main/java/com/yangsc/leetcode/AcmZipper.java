@@ -1,4 +1,4 @@
-package com.yangsc;
+package com.yangsc.leetcode;
 
 import java.util.*;
 
@@ -11,7 +11,7 @@ import java.util.*;
  * *
  * @date 2020/7/2 20:04
  **/
-public class Test {
+public class AcmZipper {
 
     private static boolean fun(String a, String b, String c) {
 
@@ -187,32 +187,28 @@ public class Test {
 
     public static void main(String[] args) {
 
-        // 评测题目: 给定三个字符串A，B，C；判断C能否由AB中的字符组成，
-        // 同时这个组合后的字符顺序必须是A，B中原来的顺序，不能逆序；
-        // 例如：A：long，B：short；如果C为lshoonrtg 或者是lonshortg，就符合题意；
-        // 如果C为hsolongrt，就不符合题意
+        // ACM 题库题解大全> poj 2192 Zipper
+        /**
+         * https://www.nowcoder.com/ta/acm-solutions/review?tpId=20&tqId=13900&query=2192&asc=true&order=&page=2
+         *
+         * Given three strings, you are to determine whether the third string can be formed by combining the characters in the first two strings. The first two strings can be mixed arbitrarily, but each must stay in its original order.
+         *
+         * For example, consider forming "tcraete" from "cat" and "tree":
+         *
+         * String A: cat
+         * String B: tree
+         * String C: tcraete
+         *
+         * */
 
         // first fun
-        System.out.println(check("long", "short", "lshoonrtg"));
-        System.out.println(check("long", "short", "lonshortg"));
-        System.out.println(check("long", "short", "hsolongrt"));
-
+        System.out.println(check("cat", "tree", "tcraete"));
 
         System.out.println("----");
-
         // second fun
-        Dfs dfs = new Dfs("long", "short", "lshoonrtg");
+        Dfs dfs = new Dfs("cat", "tree", "tcraete");
         dfs.check(0, 0, 0);
         System.out.println(dfs.flag);
-
-        Dfs dfs2 = new Dfs("long", "short", "lonshortg");
-        dfs2.check(0, 0, 0);
-        System.out.println(dfs2.flag);
-
-        Dfs dfs3 = new Dfs("long", "short", "hsolongrt");
-        dfs3.check(0, 0, 0);
-        System.out.println(dfs3.flag);
-        Map<Integer,Integer> map = new HashMap<>();
     }
 
 }
